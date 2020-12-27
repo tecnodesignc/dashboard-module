@@ -1,5 +1,5 @@
 {
-  "name": "encore/dashboard-module",
+  "name": "tecnodesignc/dashboard-module",
   "type": "encore-module",
   "description": "Dashboard module for EncoreCMS. Handles the display of the dashboard.",
   "keywords": [
