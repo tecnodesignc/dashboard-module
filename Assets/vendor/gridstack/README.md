@@ -338,7 +338,7 @@ Changes
 - fix default css rule for inner content
 - minor fixes
 
-#### v0.1.0 (2014-11-18)
+#### v1.0.0 
 
 Very first version.
 
