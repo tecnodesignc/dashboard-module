@@ -1,5 +1,8 @@
-url: https://github.com/encoreCms/Platform
+url: https://github.com/tecnodesignc/dashboard-module
 versions:
-    "1.0.0":
-        added:
-            intial version
+  "2.0.0":
+    changed:
+      - Laravel 9 compatibility
+  "1.0.0":
+    added:
+      - intial version

@@ -2,6 +2,9 @@
 
 namespace Modules\Dashboard\Repositories\Cache;
 
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Core\Repositories\Cache\BaseCacheDecorator;
 use Modules\Dashboard\Repositories\WidgetRepository;
 
@@ -17,9 +20,9 @@ class CacheWidgetDecorator extends BaseCacheDecorator implements WidgetRepositor
     /**
      * Find the saved state of widgets for the given user id
      * @param int $userId
-     * @return string
+     * @return Model|Collection|Builder|array|null
      */
-    public function findForUser($userId)
+    public function findForUser(int $userId): Model|Collection|Builder|array|null
     {
         return $this->cache
             ->tags([$this->entityName, 'global'])
@@ -35,10 +38,10 @@ class CacheWidgetDecorator extends BaseCacheDecorator implements WidgetRepositor
     /**
      * Update or create the given widgets for given user
      * @param array $widgets
-     * @param $userId
-     * @return mixed|void
+     * @param int $userId
+     * @return array|Builder|Collection|Model|null
      */
-    public function updateOrCreateForUser($widgets, $userId)
+    public function updateOrCreateForUser(array $widgets, int $userId): Model|Collection|Builder|array|null
     {
         return $this->cache
             ->tags([$this->entityName, 'global'])

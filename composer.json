@@ -1,36 +1,42 @@
 {
-  "name": "tecnodesignc/dashboard-module",
-  "type": "encore-module",
-  "description": "Dashboard module for EncoreCMS. Handles the display of the dashboard.",
-  "keywords": [
-    "encorecms",
-    "dashboard"
-  ],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Nicolas Widart",
-      "email": "info@encorecms.com",
-      "role": "Developer"
-    }
-  ],
-  "support": {
-    "email": "support@encorecms.com",
-    "issues": "https://github.com/encoreCms/Dashboard/issues",
-    "source": "https://github.com/encoreCms/Dashboard"
-  },
-  "require": {
-    "php": ">=7.1",
-    "composer/installers": "~1.0"
-  },
-  "require-dev": {
-    "friendsofphp/php-cs-fixer": "^1.11"
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+    "name": "tecnodesignc/dashboard-module",
+    "type": "encore-module",
+    "description": "Dashboard module for EncoreCMS 2.0. Handles the display of the dashboard.",
+    "keywords": [
+        "encorecms",
+        "dashboard"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcos Rativa",
+            "email": "marcos21.009@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@tecnodesign.com.co",
+        "issues": "https://github.com/tecnodesignc/Dashboard/issues",
+        "source": "https://github.com/tecnodesignc/Dashboard"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "composer/installers": "^2.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Dashboard\\": ".",
+            "Modules\\": "modules/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

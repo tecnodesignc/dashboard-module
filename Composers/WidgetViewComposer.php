@@ -9,7 +9,7 @@ class WidgetViewComposer
     /**
      * @var array
      */
-    private $subViews = [];
+    private array $subViews = [];
 
     /**
      * @param View $view
@@ -25,7 +25,7 @@ class WidgetViewComposer
      * @param string $view
      * @return $this
      */
-    public function addSubview($name, $view)
+    public function addSubview(string $name, string $view): static
     {
         $this->subViews[$name]['html'] = $view;
 
@@ -38,7 +38,7 @@ class WidgetViewComposer
      * @param array $options
      * @return $this
      */
-    public function addWidgetOptions($name, array $options)
+    public function addWidgetOptions($name, array $options): static
     {
         $this->subViews[$name]['options'] = $options;
 
@@ -50,7 +50,7 @@ class WidgetViewComposer
      * @param string $name
      * @return $this
      */
-    public function setWidgetName($name)
+    public function setWidgetName(string $name): static
     {
         $this->subViews[$name]['id'] = $name;
 

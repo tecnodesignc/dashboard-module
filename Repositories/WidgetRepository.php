@@ -2,6 +2,9 @@
 
 namespace Modules\Dashboard\Repositories;
 
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Core\Repositories\BaseRepository;
 
 interface WidgetRepository extends BaseRepository
@@ -9,7 +12,7 @@ interface WidgetRepository extends BaseRepository
     /**
      * Find the saved state of widgets for the given user id
      * @param int $userId
-     * @return string
+     * @return Model|Collection|Builder|array|null
      */
     public function findForUser($userId);
 

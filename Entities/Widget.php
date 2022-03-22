@@ -6,10 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Widget extends Model
 {
-    protected $fillable = ['widgets', 'user_id'];
-    protected $table = 'dashboard__widgets';
+    /**
+     * @var array|string[]
+     */
+    protected array $fillable = ['widgets', 'user_id'];
+    /**
+     * @var string
+     */
+    protected string $table = 'dashboard__widgets';
 
-    public function user()
+    /**
+     * @return mixed
+     */
+    public function user(): mixed
     {
         $driver = config('encore.user.config.driver');
 

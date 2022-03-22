@@ -13,7 +13,7 @@ class RegisterDashboardSidebar extends AbstractAdminSidebar
      * @param Menu $menu
      * @return Menu
      */
-    public function extendWith(Menu $menu)
+    public function extendWith(Menu $menu): Menu
     {
         $menu->group(trans('dashboard::dashboard.name'), function (Group $group) {
             $group->weight(0);
