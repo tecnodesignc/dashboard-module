@@ -24,9 +24,13 @@ class CacheWidgetDecorator extends BaseCacheDecorator implements WidgetRepositor
      */
     public function findForUser(int $userId): Model|Collection|Builder|array|null
     {
-        return $this->cache
-            ->tags([$this->entityName, 'global'])
-            ->remember(
+       $store=$this->cache;
+
+        if (method_exists($this->cache->getStore(), 'tags')) {
+            $store = $store->tags([$this->entityName, 'global']);
+        }
+
+        return $store->remember(
                 "{$this->locale}.{$this->entityName}.findForUser.{$userId}",
                 $this->cacheTime,
                 function () use ($userId) {
@@ -43,9 +47,13 @@ class CacheWidgetDecorator extends BaseCacheDecorator implements WidgetRepositor
      */
     public function updateOrCreateForUser(array $widgets, int $userId): Model|Collection|Builder|array|null
     {
-        return $this->cache
-            ->tags([$this->entityName, 'global'])
-            ->remember(
+        $store=$this->cache;
+
+        if (method_exists($this->cache->getStore(), 'tags')) {
+            $store = $store->tags([$this->entityName, 'global']);
+        }
+
+        return $store->remember(
                 "{$this->locale}.{$this->entityName}.updateOrCreateForUser.{$userId}",
                 $this->cacheTime,
                 function () use ($widgets, $userId) {
