@@ -1,8 +1,12 @@
 url: https://github.com/tecnodesignc/dashboard-module
 versions:
+  "2.0.1":
+    changed:
+      - Fix Entity Widget attributes
+      - Fix Repositoy type attributes
   "2.0.0":
     changed:
       - Laravel 9 compatibility
   "1.0.0":
     added:
-      - intial version
+      - Intial version

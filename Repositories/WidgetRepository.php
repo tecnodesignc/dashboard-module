@@ -14,12 +14,13 @@ interface WidgetRepository extends BaseRepository
      * @param int $userId
      * @return Model|Collection|Builder|array|null
      */
-    public function findForUser($userId);
+    public function findForUser(int $userId): Model|Collection|Builder|array|null;
 
     /**
      * Update or create the given widgets for given user
      * @param array $widgets
+     * @param int $userId
      * @return void
      */
-    public function updateOrCreateForUser($widgets, $userId);
+    public function updateOrCreateForUser(array $widgets, int $userId);
 }
