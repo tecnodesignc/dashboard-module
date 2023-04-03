@@ -1,5 +1,8 @@
 url: https://github.com/tecnodesignc/dashboard-module
 versions:
+  "2.1.0":
+    changed:
+      - Laravel 10 compatibility
   "2.0.2":
     changed:
       - CacheWidgetDecorator Support for File Drive Cache
